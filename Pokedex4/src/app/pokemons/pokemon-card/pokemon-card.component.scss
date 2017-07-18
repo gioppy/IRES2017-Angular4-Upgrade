@@ -1,0 +1,54 @@
+@import "../../../assets/scss/variables";
+
+//Pokemon card
+
+.pokemon-card{
+  padding: 10%;
+  position: relative;
+  background-color: $color-white;
+
+  .type--simple{
+    position: absolute;
+
+    &.type--index-0{
+      top: 3%;
+      left: 3%;
+      z-index: 101;
+    }
+
+    &.type--index-1{
+      left: 7%;
+      top: 7%;
+      z-index: 100;
+    }
+  }
+}
+
+.pokemon-card__number{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 9vw;
+  z-index: 100;
+  font-family: $ff-montserrat;
+  font-weight: 200;
+}
+
+.pokemon-card__icon{
+  padding-top: 15%;
+  position: relative;
+  z-index: 101;
+}
+
+.pokemon-card__name{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.6em;
+  margin-top: 12px;
+
+  a{
+    color: $color-black;
+    text-decoration: none;
+  }
+}

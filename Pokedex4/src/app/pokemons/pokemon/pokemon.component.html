@@ -1,0 +1,86 @@
+<app-header-bar [data]="headerData"></app-header-bar>
+<article class="main-content">
+  <div class="pokemon__info box-content with-shadow">
+    <div class="pokemon__info-media">
+      <figure>
+        <img [src]="pokemon.image" [alt]="pokemon.name" />
+      </figure>
+      <app-cry [audio]="pokemon.cry" *ngIf="pokemon.cry"></app-cry>
+    </div>
+    <p class="pokemon__info-description">{{ pokemon.description }}</p>
+  </div>
+  <div class="box-content box-content--flex with-shadow">
+    <div class="box-content__column">
+      <div class="block">
+        <h2 class="title title__h3">Maschio</h2>
+        <div class="pokemon__sex-meter pokemon__sex-meter--male">
+          <span [style.width]="pokemon.male + '%'"></span>
+          <span>{{ pokemon.male }}%</span>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2 class="title title__h3">Femmina</h2>
+        <div class="pokemon__sex-meter pokemon__sex-meter--female">
+          <span [style.width]="pokemon.female + '%'"></span>
+          <span>{{ pokemon.female }}%</span>
+        </div>
+      </div>
+    </div>
+    <div class="box-content__column">
+      <div class="block">
+        <h2 class="title title__h3">Specie</h2>
+        <p>{{ pokemon.species }}</p>
+      </div>
+
+      <div class="block">
+        <h2 class="title title__h3">Altezza e peso</h2>
+        <p>{{ pokemon.height }}, {{ pokemon.weight }}</p>
+      </div>
+    </div>
+    <div class="box-content__column">
+      <div class="block">
+        <h2 class="title title__h3">Abilit&agrave;</h2>
+        <p><app-ability *ngFor="let ability of pokemon.abilities.normal" [data]="ability"></app-ability></p>
+      </div>
+
+      <div class="block">
+        <h2 class="title title__h3">Abilit&agrave; nascosta</h2>
+        <p><app-ability *ngFor="let ability of pokemon.abilities.hidden" [data]="ability"></app-ability></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-content with-shadow">
+    <app-accordion>
+      <app-accordion-item [title]="'Resistenze e vulnerabilità'" (open)="resistenceAccordion($event)">
+        <div class="weakness">
+          <h3 class="weakness__type">Debolezze</h3>
+          <app-weakness [title]="'Superefficace - 4x'" [types]="weakness['4x']" *ngIf="weakness['4x']"></app-weakness>
+          <app-weakness [title]="'Superefficace - 2x'" [types]="weakness['2x']" *ngIf="weakness['2x']"></app-weakness>
+        </div>
+
+        <div class="weakness">
+          <h3 class="weakness__type">Danno normale</h3>
+          <app-weakness [types]="weakness['1x']" *ngIf="weakness['1x']"></app-weakness>
+        </div>
+
+        <div class="weakness">
+          <h3 class="weakness__type">Resistenze</h3>
+          <app-weakness [title]="'Poco efficace ½x'" [types]="weakness['half']" *ngIf="weakness['half']"></app-weakness>
+          <app-weakness [title]="'Poco efficate ¼x'" [types]="weakness['quarter']" *ngIf="weakness['quarter']"></app-weakness>
+          <app-weakness [title]="'Nessun effetto'" [types]="weakness['0x']" *ngIf="weakness['0x']"></app-weakness>
+        </div>
+      </app-accordion-item>
+      <app-accordion-item [title]="'Mosse apprese per livello'" (open)="movesLvAccordion($event)">
+        <app-move-table [type]="'lv'" [moves]="moves"></app-move-table>
+      </app-accordion-item>
+      <app-accordion-item [title]="'Mosse apprese da MT/MN'" (open)="movesMtAccordion($event)">
+        <app-move-table [type]="'mtmn'" [moves]="mtmns"></app-move-table>
+      </app-accordion-item>
+    </app-accordion>
+  </div>
+  <div class="box-content">
+    <a [routerLink]="['/']" class="button button--cyan">&laquo; Torna all'indice</a>
+  </div>
+</article>

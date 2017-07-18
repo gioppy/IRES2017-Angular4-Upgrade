@@ -1,0 +1,1 @@
+This directory is reserved for fonts files and css/scss regarding fonts load.

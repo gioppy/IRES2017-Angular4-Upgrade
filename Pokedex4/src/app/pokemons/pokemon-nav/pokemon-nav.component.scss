@@ -1,0 +1,15 @@
+@import "../../../assets/scss/variables";
+
+.pokemon-nav{
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: $color-black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.pokemon-nav__name{
+  display: block;
+}

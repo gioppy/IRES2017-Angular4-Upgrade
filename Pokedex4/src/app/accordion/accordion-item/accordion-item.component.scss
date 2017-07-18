@@ -1,0 +1,23 @@
+@import "../../../assets/scss/variables";
+
+.accordion-item{
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid $color-grey;
+  display: block;
+}
+
+.accordion-item__title{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &::after{
+    content: '+';
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1;
+  }
+}

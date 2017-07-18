@@ -1,0 +1,55 @@
+@import "variables";
+@import "reset";
+
+body{
+  font-family: $ff-istok;
+  //font-size: 90%;
+  font-size: calc(0.8em + 0.2vw);
+  color: $color-black;
+}
+
+.main-content{
+  padding: 80px 0;
+}
+
+.box-content{
+  width: 66%;
+  padding: 24px 2%;
+  background-color: $color-white;
+  margin: 12px auto;
+}
+
+.box-content--flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-content__column{
+  width: 30%;
+}
+
+.with-shadow{
+  box-shadow: 1px 1px 3px $color-grey;
+  border: 1px solid $color-grey;
+}
+
+.image-fluid{
+  max-width: 100%;
+  height: auto;
+}
+
+.block{
+  margin-bottom: 12px;
+}
+
+.title{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title__h3{
+  font-size: 1em;
+  margin-bottom: 3px;
+}
+
+@import "button";

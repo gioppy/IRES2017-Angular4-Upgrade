@@ -1,0 +1,51 @@
+@import "../../assets/scss/variables";
+
+.pokemon-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  background-color: $color-grey-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 201;
+}
+
+.pokemon-nav{
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: $color-black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.pokemon-nav__name{
+  display: block;
+}
+
+.pokemon-title{
+  width: 70%;
+  display: flex;
+  align-items: baseline;
+}
+
+.pokemon-title__name{
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-right: 21px;
+
+  span{
+    font-family: $ff-montserrat;
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
+
+.pokemon-header__nav{
+  width: 15%;
+}

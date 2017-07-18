@@ -1,0 +1,4 @@
+<app-header-bar [data]="headerData"></app-header-bar>
+<div class="main-content pokemon-list">
+  <app-pokemon-card *ngFor="let pokemon of pokemons" [data]="pokemon" class="pokemon-list__item"></app-pokemon-card>
+</div>

@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables";
+
+.pokemon-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pokemon-list__item{
+  width: 30%;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: 1px solid $color-grey;
+  text-align: center;
+}

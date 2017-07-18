@@ -1,0 +1,10 @@
+<div class="pokemon-card with-shadow" ngClass="typesClasses">
+  <span class="pokemon-card__number">{{ data.number }}</span>
+  <figure class="pokemon-card__icon">
+    <a [routerLink]="['pokemon', data.number]"><img class="image-fluid" [src]="data.icon" alt="" /></a>
+    <figcaption class="pokemon-card__name">
+      <a [routerLink]="['pokemon', data.number]">{{ data.name }}</a>
+    </figcaption>
+  </figure>
+  <app-type *ngFor="let type of types; let i = index" [data]="type" [index]="i" [simple]="true"></app-type>
+</div>

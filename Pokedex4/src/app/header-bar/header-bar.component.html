@@ -1,0 +1,10 @@
+<header class="pokemon-header with-shadow">
+  <app-pokemon-nav class="pokemon-header__nav" *ngIf="data.navigation" [pid]="data.navigation.previous"></app-pokemon-nav>
+  <div class="pokemon-title">
+    <h1 class="pokemon-title__name"><span>{{ data.number }}</span> {{ data.title }}</h1>
+    <div *ngIf="data.navigation">
+      <app-type *ngFor="let type of data.types" [data]="type"></app-type>
+    </div>
+  </div>
+  <app-pokemon-nav class="pokemon-header__nav" *ngIf="data.navigation" [pid]="data.navigation.next"></app-pokemon-nav>
+</header>

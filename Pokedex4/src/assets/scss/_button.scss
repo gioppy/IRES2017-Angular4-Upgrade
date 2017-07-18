@@ -1,0 +1,30 @@
+//Button
+
+.button{
+  background-color: $color-grey-dark;
+  border: none;
+  display: inline-block;
+  /*padding: 3px 3%;*/
+  padding: 6px 9px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-family: $ff-istok;
+  text-decoration: none;
+}
+
+.button--icon{
+  display: inline-flex;
+  padding: 3px 12px;
+  align-items: center;
+
+  .icon{
+    margin-right: 12px;
+  }
+}
+
+.button--cyan{
+  background-color: $color-cyan;
+  color: $color-white;
+}

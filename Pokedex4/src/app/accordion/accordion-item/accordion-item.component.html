@@ -1,0 +1,6 @@
+<div class="accordion-item">
+  <h2 class="accordion-item__title" (click)="handleAccordion($event)">{{ title }}</h2>
+  <div class="accordion-item__content" [hidden]="!isOpen">
+    <ng-content></ng-content>
+  </div>
+</div>

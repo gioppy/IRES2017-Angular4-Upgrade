@@ -1,0 +1,54 @@
+@import "../../../assets/scss/variables";
+
+//Types
+
+.type{
+  display: inline-block;
+  padding: 6px 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.type--simple{
+  width: 8px;
+  height: 14px;
+  background-color: $color-white;
+  transition: background-color .5s;
+  position: absolute;
+
+  &.type--index-0{
+    top: 3%;
+    left: 3%;
+    z-index: 101;
+  }
+
+  &.type--index-1{
+    left: 7%;
+    top: 7%;
+    z-index: 100;
+  }
+
+  .type__name{
+    display: none;
+  }
+}
+
+.type--normal{background-color: $type-normal}
+.type--fire{background-color: $type-fire}
+.type--water{background-color: $type-water}
+.type--electric{background-color: $type-electric}
+.type--grass{background-color: $type-grass}
+.type--ice{background-color: $type-ice}
+.type--fighting{background-color: $type-fighting}
+.type--poison{background-color: $type-poison}
+.type--ground{background-color: $type-ground}
+.type--flying{background-color: $type-flying}
+.type--psychic{background-color: $type-psychic}
+.type--bug{background-color: $type-bug}
+.type--rock{background-color: $type-rock}
+.type--ghost{background-color: $type-ghost}
+.type--dragon{background-color: $type-dragon}
+.type--dark{background-color: $type-dark; color: $color-white;}
+.type--steel{background-color: $type-steel}
+.type--fairy{background-color: $type-fairy}

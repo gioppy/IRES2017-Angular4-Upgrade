@@ -1,0 +1,50 @@
+<table class="table" *ngIf="type === 'lv'; else mtmn">
+  <thead class="table__header">
+  <tr>
+    <th>Lv.</th>
+    <th>Mossa</th>
+    <th>Tipo</th>
+    <th>Categoria</th>
+    <th>Potenza</th>
+    <th>Precisione</th>
+    <th>PP</th>
+  </tr>
+  </thead>
+  <tbody class="table__body">
+  <tr *ngFor="let move of moves">
+    <td>{{ move.lv }}</td>
+    <td>{{ move.title }}</td>
+    <td><app-type [data]="move.type"></app-type></td>
+    <td>{{ move.category }}</td>
+    <td>{{ move.power }}</td>
+    <td>{{ move.accuracy }}</td>
+    <td>{{ move.pp }}</td>
+  </tr>
+  </tbody>
+</table>
+<ng-template #mtmn>
+  <table class="table">
+    <thead class="table__header">
+    <tr>
+      <th>MT/MN</th>
+      <th>Mossa</th>
+      <th>Tipo</th>
+      <th>Categoria</th>
+      <th>Potenza</th>
+      <th>Precisione</th>
+      <th>PP</th>
+    </tr>
+    </thead>
+    <tbody class="table__body">
+    <tr *ngFor="let mtmn of moves">
+      <td>{{ mtmn.name }}</td>
+      <td>{{ mtmn.title }}</td>
+      <td><app-type [data]="mtmn.type"></app-type></td>
+      <td>{{ mtmn.category }}</td>
+      <td>{{ mtmn.power }}</td>
+      <td>{{ mtmn.accuracy }}</td>
+      <td>{{ mtmn.pp }}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-template>
